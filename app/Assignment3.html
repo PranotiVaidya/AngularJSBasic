@@ -1,0 +1,20 @@
+
+<div  ng-controller="Controller3">
+
+
+<input type="text" ng-model="test"><br>
+
+
+<table border="1" width="100%">
+<tr>
+<th ng-click="orderByMe('id')">ID</th>
+<th ng-click="orderByMe('tech')">Technology</th>
+</tr>
+<tr ng-repeat="x in id | orderBy:myOrderBy  | filter:test">
+<td>{{x.id}}</td>
+<td>{{x.tech}}</td>
+</tr>
+</table>
+
+</div>
+

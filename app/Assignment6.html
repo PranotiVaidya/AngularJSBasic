@@ -1,0 +1,39 @@
+
+
+
+
+    <div ng-controller="Controller6" class="container">
+        <table class="table table-condense" border="2">
+           
+            <thead>
+                <tr class="bg-primary">
+                    <th>SelectBox</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items">
+                    <td><input type="checkbox" ng-model="item.select" ng-change="setTotals(item)"></td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.price | number:2}}</td>
+                    <td>{{item.total | number:2}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="bg-warning">
+                    <td></td>
+                    <td>Totals</td>
+                    <td>{{invoiceCount}}</td>
+                    <td></td>                    
+                    <td>{{invoiceTotal }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+
